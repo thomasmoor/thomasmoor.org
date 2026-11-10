@@ -24,6 +24,7 @@ CONTENT = {
             "privacy_desc": "How thomasmoor.org handles personal data, cookies and analytics.",
         },
         "hero": {
+            "title": "Digital Solutions Provider",
             "lead": "Websites, Python tools and automation — delivered with the rigour of 25 years in banking IT.",
             "cta1": "Explore services",
         },
@@ -237,6 +238,7 @@ CONTENT = {
             "privacy_desc": "Comment thomasmoor.org traite les données personnelles, les cookies et la mesure d’audience.",
         },
         "hero": {
+            "title": "Fournisseur de solutions numériques",
             "lead": "Sites web, outils Python et automatisation — livrés avec la rigueur de 25 ans d’informatique bancaire.",
             "cta1": "Découvrir les services",
         },

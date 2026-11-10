@@ -258,7 +258,7 @@ def home_page(lang: str) -> None:
     <div class="container hero-grid">
       <div class="hero-text">
         <h1 class="eyebrow">{t['h1']}</h1>
-        <h2 class="hero-title">{t['h2']}</h2>
+        <h2 class="hero-title">{t['hero']['title']}</h2>
         <p class="hero-lead">{t['hero']['lead']}</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#services">{t['hero']['cta1']} {icon('arrow')}</a>
