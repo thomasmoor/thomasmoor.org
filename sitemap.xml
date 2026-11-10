@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://thomasmoor.org/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/"/>
+  </url>
+  <url>
+    <loc>https://thomasmoor.org/fr/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/"/>
+  </url>
+  <url>
+    <loc>https://thomasmoor.org/about.html</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/about.html"/>
+  </url>
+  <url>
+    <loc>https://thomasmoor.org/fr/about.html</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/about.html"/>
+  </url>
+  <url>
+    <loc>https://thomasmoor.org/privacy.html</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://thomasmoor.org/fr/privacy.html</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://thomasmoor.org/services/website-development.html</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/services/website-development.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/services/website-development.html"/>
+  </url>
+  <url>
+    <loc>https://thomasmoor.org/fr/services/website-development.html</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/services/website-development.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/services/website-development.html"/>
+  </url>
+  <url>
+    <loc>https://thomasmoor.org/services/python-automation.html</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/services/python-automation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/services/python-automation.html"/>
+  </url>
+  <url>
+    <loc>https://thomasmoor.org/fr/services/python-automation.html</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/services/python-automation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/services/python-automation.html"/>
+  </url>
+  <url>
+    <loc>https://thomasmoor.org/services/technical-consulting.html</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/services/technical-consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/services/technical-consulting.html"/>
+  </url>
+  <url>
+    <loc>https://thomasmoor.org/fr/services/technical-consulting.html</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/services/technical-consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/services/technical-consulting.html"/>
+  </url>
+  <url>
+    <loc>https://thomasmoor.org/services/ai-integration.html</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/services/ai-integration.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/services/ai-integration.html"/>
+  </url>
+  <url>
+    <loc>https://thomasmoor.org/fr/services/ai-integration.html</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/services/ai-integration.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/services/ai-integration.html"/>
+  </url>
+</urlset>
