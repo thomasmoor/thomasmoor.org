@@ -25,10 +25,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=048f5f73">
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});</script>
-<script src="assets/js/config.js"></script>
-<script src="assets/js/main.js" defer></script>
+<script src="assets/js/config.js?v=d55411d3"></script>
+<script src="assets/js/main.js?v=b1313b63" defer></script>
 <link rel="preload" as="image" href="assets/img/hero.webp" type="image/webp">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Thomas Moor — Digital Services", "legalName": "Thomas Moor Consulting", "url": "https://thomasmoor.org", "email": "contact@thomasmoor.org", "image": "https://thomasmoor.org/assets/img/og-image.jpg", "logo": "https://thomasmoor.org/assets/img/logo.png", "areaServed": "Worldwide", "founder": {"@type": "Person", "name": "Thomas Moor"}, "sameAs": ["https://www.linkedin.com/in/tmoor", "https://github.com/thomasmoor"], "knowsLanguage": ["en", "fr"]}</script>
 </head>
@@ -64,39 +64,41 @@
       <div class="form-card">
         <h3>Tell me about your project</h3>
         <p class="form-intro">I usually reply within one business day.</p>
-        <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate data-messages="{&quot;required&quot;: &quot;Please enter your name.&quot;, &quot;email&quot;: &quot;Please enter a valid email address.&quot;, &quot;sending&quot;: &quot;Sending…&quot;, &quot;success&quot;: &quot;Thank you! Your message has been sent. I will get back to you shortly.&quot;, &quot;error&quot;: &quot;Sorry, the message could not be sent. Please email contact@thomasmoor.org.&quot;, &quot;notConfigured&quot;: &quot;The form is not active yet. Please email contact@thomasmoor.org.&quot;}">
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate data-messages="{&quot;required&quot;: &quot;Please enter your name.&quot;, &quot;email&quot;: &quot;Please enter a valid email address.&quot;, &quot;sending&quot;: &quot;Sending…&quot;, &quot;success&quot;: &quot;Thank you! Your message has been sent. I will get back to you shortly.&quot;, &quot;error&quot;: &quot;Sorry, the message could not be sent. Please email contact@thomasmoor.org.&quot;, &quot;notConfigured&quot;: &quot;The form is not active yet. Please email contact@thomasmoor.org.&quot;}">
           <input type="hidden" name="access_key" value="">
           <input type="hidden" name="subject" value="New enquiry from thomasmoor.org">
           <input type="hidden" name="from_name" value="thomasmoor.org">
           <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="field">
-            <label for="f-name">Name <span class="req" title="required">*</span></label>
-            <input id="f-name" name="name" type="text" autocomplete="name" required>
+            <label for="hero-name">Name <span class="req" title="required">*</span></label>
+            <input id="hero-name" name="name" type="text" autocomplete="name" required>
           </div>
           <div class="field-row">
             <div class="field">
-              <label for="f-phone">Phone</label>
-              <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+              <label for="hero-phone">Phone</label>
+              <input id="hero-phone" name="phone" type="tel" autocomplete="tel">
             </div>
             <div class="field">
-              <label for="f-email">eMail</label>
-              <input id="f-email" name="email" type="email" autocomplete="email">
+              <label for="hero-email">eMail</label>
+              <input id="hero-email" name="email" type="email" autocomplete="email">
             </div>
           </div>
           <div class="field-row">
             <div class="field">
-              <label for="f-service">Service</label>
-              <select id="f-service" name="service">
+              <label for="hero-service">Service</label>
+              <select id="hero-service" name="service">
               <option value="">Select a service</option>
               <option value="Website Development &amp; Delivery">Website Development &amp; Delivery</option>
-              <option value="Advanced Python Tool Development and Automation">Advanced Python Tool Development and Automation</option>
-              <option value="Technical Consulting &amp; Business Analysis">Technical Consulting &amp; Business Analysis</option>
-              <option value="Automation &amp; AI Integration">Automation &amp; AI Integration</option>
+              <option value="Advanced Python Tool Development">Advanced Python Tool Development</option>
+              <option value="Automation">Automation</option>
+              <option value="Technical Consulting">Technical Consulting</option>
+              <option value="Business Analysis">Business Analysis</option>
+              <option value="AI Integration">AI Integration</option>
               </select>
             </div>
             <div class="field">
-              <label for="f-when">When do you need it?</label>
-              <select id="f-when" name="when_needed">
+              <label for="hero-when">When do you need it?</label>
+              <select id="hero-when" name="when_needed">
               <option value="">Select a timeframe</option>
               <option value="Emergency">Emergency</option>
               <option value="This week">This week</option>
@@ -105,8 +107,8 @@
             </div>
           </div>
           <div class="field">
-            <label for="f-message">Message</label>
-            <textarea id="f-message" name="message" rows="4" placeholder="A few words about what you need…"></textarea>
+            <label for="hero-message">Message</label>
+            <textarea id="hero-message" name="message" rows="4" placeholder="A few words about what you need…"></textarea>
           </div>
           <button type="submit" class="btn btn-primary btn-block">Send request <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
           <p class="form-status" role="status" aria-live="polite"></p>
@@ -121,7 +123,7 @@
       <div class="section-head">
         <p class="kicker">What I do</p>
         <h2 class="section-title">Services</h2>
-        <p>Four ways I can help — from a fast, reliable website to tools that take the repetitive work off your team.</p>
+        <p>Six ways I can help — from a fast, reliable website to tools that take the repetitive work off your team.</p>
       </div>
       <div class="cards">
         <a class="service-card" href="services/website-development.html">
@@ -130,22 +132,34 @@
           <p>Design, build, and deployment of simple, fast, and reliable HTML/CSS websites (including GitHub Pages hosting).</p>
           <span class="card-link">Learn more <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
-        <a class="service-card" href="services/python-automation.html">
+        <a class="service-card" href="services/python-development.html">
           <span class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></svg></span>
-          <h3>Advanced Python Tool Development and Automation</h3>
-          <p>Custom scripting, data processing, and integration tools for business workflows.</p>
+          <h3>Advanced Python Tool Development</h3>
+          <p>Custom Python scripting, data processing, and integration tools built around your business workflows.</p>
+          <span class="card-link">Learn more <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="service-card" href="services/automation.html">
+          <span class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5M3 21v-5h5"/></svg></span>
+          <h3>Automation</h3>
+          <p>Automating reporting, data handling, and repetitive tasks with Python and JavaScript — so your team can focus on higher-value work.</p>
           <span class="card-link">Learn more <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
         <a class="service-card" href="services/technical-consulting.html">
           <span class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 6-6"/><path d="M16 8h4v4"/></svg></span>
-          <h3>Technical Consulting &amp; Business Analysis</h3>
-          <p>Bridging business needs and technical implementation (25+ years in Capital Markets, Risk, and IT).</p>
+          <h3>Technical Consulting</h3>
+          <p>Independent technical expertise on systems, architecture, and implementation — backed by 25+ years in Capital Markets, Risk, and IT.</p>
+          <span class="card-link">Learn more <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="service-card" href="services/business-analysis.html">
+          <span class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></svg></span>
+          <h3>Business Analysis</h3>
+          <p>Bridging business needs and technical implementation with clear requirements, specifications, and process analysis.</p>
           <span class="card-link">Learn more <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
         <a class="service-card" href="services/ai-integration.html">
-          <span class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M10 10h4v4h-4z"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span>
-          <h3>Automation &amp; AI Integration</h3>
-          <p>Streamlining content creation, reporting, and repetitive tasks using Python and JavaScript.</p>
+          <span class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3l1.9 5.1L18 10l-5.1 1.9L11 17l-1.9-5.1L4 10l5.1-1.9z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8z"/></svg></span>
+          <h3>AI Integration</h3>
+          <p>Putting AI to work on content creation, document processing, and reporting — with the right guardrails.</p>
           <span class="card-link">Learn more <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
       </div>
@@ -178,11 +192,15 @@
   </section>
 
   <section class="section" id="about">
-    <div class="container about-grid">
-      <div class="portrait"><picture><source srcset="assets/img/thomas-moor.webp" type="image/webp"><img src="assets/img/thomas-moor.jpg" width="640" height="800" alt="Thomas Moor" loading="lazy" decoding="async"></picture></div>
+    <div class="container about-contact">
       <div class="about-text">
-        <p class="kicker">About</p>
-        <h2 class="section-title">Rigour from banking, applied to your project</h2>
+        <div class="about-head">
+          <div class="portrait portrait-sm"><picture><source srcset="assets/img/thomas-moor.webp" type="image/webp"><img src="assets/img/thomas-moor.jpg" width="640" height="800" alt="Thomas Moor" loading="lazy" decoding="async"></picture></div>
+          <div>
+            <p class="kicker">About</p>
+            <h2 class="section-title">Rigour from banking, applied to your project</h2>
+          </div>
+        </div>
           <p>With over 25 years of experience in international banking and IT — including senior roles at Finastra, Murex, Calypso, and Reuters — I have spent my career solving complex technical and business problems. Today, I apply that same rigor, precision, and project discipline to web services and Python development.</p>
           <p>I combine deep technical skills (SQL, Python, Java, VBA, JavaScript) with a consultant’s mindset: I listen, I spec, I deliver. Whether you need a clean, simple website or a custom automation tool, I bring the same commitment to quality, clear communication, and on-time delivery that I have brought to tier-one financial institutions across Europe and the Middle East.</p>
         <div class="stats"><div class="stat"><strong>25+</strong><span>years in banking &amp; IT</span></div><div class="stat"><strong>2</strong><span>languages: FR / EN</span></div><div class="stat"><strong>100%</strong><span>remote delivery</span></div></div>
@@ -190,6 +208,60 @@
           <a class="btn btn-primary" href="about.html">More about me <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/tmoor" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a>
         </div>
+      </div>
+      <div class="form-card">
+        <h3>Tell me about your project</h3>
+        <p class="form-intro">I usually reply within one business day.</p>
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate data-messages="{&quot;required&quot;: &quot;Please enter your name.&quot;, &quot;email&quot;: &quot;Please enter a valid email address.&quot;, &quot;sending&quot;: &quot;Sending…&quot;, &quot;success&quot;: &quot;Thank you! Your message has been sent. I will get back to you shortly.&quot;, &quot;error&quot;: &quot;Sorry, the message could not be sent. Please email contact@thomasmoor.org.&quot;, &quot;notConfigured&quot;: &quot;The form is not active yet. Please email contact@thomasmoor.org.&quot;}">
+          <input type="hidden" name="access_key" value="">
+          <input type="hidden" name="subject" value="New enquiry from thomasmoor.org">
+          <input type="hidden" name="from_name" value="thomasmoor.org">
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="field">
+            <label for="about-name">Name <span class="req" title="required">*</span></label>
+            <input id="about-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="about-phone">Phone</label>
+              <input id="about-phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="about-email">eMail</label>
+              <input id="about-email" name="email" type="email" autocomplete="email">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="about-service">Service</label>
+              <select id="about-service" name="service">
+              <option value="">Select a service</option>
+              <option value="Website Development &amp; Delivery">Website Development &amp; Delivery</option>
+              <option value="Advanced Python Tool Development">Advanced Python Tool Development</option>
+              <option value="Automation">Automation</option>
+              <option value="Technical Consulting">Technical Consulting</option>
+              <option value="Business Analysis">Business Analysis</option>
+              <option value="AI Integration">AI Integration</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="about-when">When do you need it?</label>
+              <select id="about-when" name="when_needed">
+              <option value="">Select a timeframe</option>
+              <option value="Emergency">Emergency</option>
+              <option value="This week">This week</option>
+              <option value="This month">This month</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="about-message">Message</label>
+            <textarea id="about-message" name="message" rows="4" placeholder="A few words about what you need…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send request <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+          <p class="form-note">Your details are only used to answer your request. See the <a href="privacy.html">privacy policy</a>.</p>
+        </form>
       </div>
     </div>
   </section>
@@ -208,9 +280,11 @@
       <h2 class="footer-title">Services</h2>
       <ul class="footer-list">
           <li><a href="services/website-development.html">Website Development &amp; Delivery</a></li>
-          <li><a href="services/python-automation.html">Advanced Python Tool Development and Automation</a></li>
-          <li><a href="services/technical-consulting.html">Technical Consulting &amp; Business Analysis</a></li>
-          <li><a href="services/ai-integration.html">Automation &amp; AI Integration</a></li>
+          <li><a href="services/python-development.html">Advanced Python Tool Development</a></li>
+          <li><a href="services/automation.html">Automation</a></li>
+          <li><a href="services/technical-consulting.html">Technical Consulting</a></li>
+          <li><a href="services/business-analysis.html">Business Analysis</a></li>
+          <li><a href="services/ai-integration.html">AI Integration</a></li>
       </ul>
     </div>
     <div>

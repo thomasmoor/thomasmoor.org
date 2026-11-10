@@ -5,6 +5,7 @@ Usage:  python tools/build.py
 Edit the copy in tools/content.py, the styles in assets/css/style.css,
 and the Google Analytics ID / Web3Forms key in assets/js/config.js.
 """
+import hashlib
 import json
 from datetime import date
 from pathlib import Path
@@ -25,6 +26,9 @@ _P = {
     "terminal": '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/>',
     "chart": '<path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 6-6"/><path d="M16 8h4v4"/>',
     "chip": '<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M10 10h4v4h-4z"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/>',
+    "cycle": '<path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5M3 21v-5h5"/>',
+    "clipboard": '<rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/>',
+    "sparkle": '<path d="M11 3l1.9 5.1L18 10l-5.1 1.9L11 17l-1.9-5.1L4 10l5.1-1.9z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8z"/>',
     "mail": '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/>',
     "globe": '<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
     "clock": '<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',
@@ -73,7 +77,10 @@ class Ctx:
         return f"{SITE}/{'fr/' if lang == 'fr' else ''}{p}"
 
     def asset(self, p: str) -> str:
-        return self.root + "assets/" + p
+        url = self.root + "assets/" + p
+        if p.endswith((".css", ".js")):  # cache-busting: the version changes whenever the file does
+            url += "?v=" + hashlib.md5((ROOT / "assets" / p).read_bytes()).hexdigest()[:8]
+        return url
 
     def service(self, slug: str) -> str:
         return f"{self.lroot}services/{slug}.html"
@@ -211,17 +218,68 @@ def picture(c: Ctx, stem: str, alt: str, w: int, h: int, cls: str = "", lazy: bo
             f'{f" class={chr(34)}{cls}{chr(34)}" if cls else ""}></picture>')
 
 
-# --------------------------------------------------------------------- pages
-def home_page(lang: str) -> None:
-    c = Ctx(lang, "index.html")
-    t, fm = c.t, c.t["form"]
+def contact_form(c: Ctx, p: str) -> str:
+    """The contact form card. `p` prefixes the field ids so the form can appear twice on a page."""
+    fm = c.t["form"]
     privacy = f"{c.lroot}privacy.html"
-
     svc_opts = "\n".join(
-        f'              <option value="{CONTENT["en"]["services"][s["slug"]]["name"]}">{t["services"][s["slug"]]["name"]}</option>'
+        f'              <option value="{CONTENT["en"]["services"][s["slug"]]["name"]}">{c.t["services"][s["slug"]]["name"]}</option>'
         for s in SERVICES)
     when_opts = "\n".join(f'              <option value="{v}">{label}</option>' for v, label in fm["when_opts"])
     msgs = json.dumps(fm["msg"], ensure_ascii=False).replace('"', "&quot;")
+    return f"""<div class="form-card">
+        <h3>{fm['title']}</h3>
+        <p class="form-intro">{fm['intro']}</p>
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate data-messages="{msgs}">
+          <input type="hidden" name="access_key" value="">
+          <input type="hidden" name="subject" value="{fm['subject']}">
+          <input type="hidden" name="from_name" value="thomasmoor.org">
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="field">
+            <label for="{p}-name">{fm['name']} <span class="req" title="{fm['required']}">*</span></label>
+            <input id="{p}-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="{p}-phone">{fm['phone']}</label>
+              <input id="{p}-phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="{p}-email">{fm['email']}</label>
+              <input id="{p}-email" name="email" type="email" autocomplete="email">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="{p}-service">{fm['service']}</label>
+              <select id="{p}-service" name="service">
+              <option value="">{fm['service_ph']}</option>
+{svc_opts}
+              </select>
+            </div>
+            <div class="field">
+              <label for="{p}-when">{fm['when']}</label>
+              <select id="{p}-when" name="when_needed">
+              <option value="">{fm['when_ph']}</option>
+{when_opts}
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="{p}-message">{fm['message']}</label>
+            <textarea id="{p}-message" name="message" rows="4" placeholder="{fm['message_ph']}"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">{fm['submit']} {icon('arrow')}</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+          <p class="form-note">{fm['note'].format(privacy=privacy)}</p>
+        </form>
+      </div>"""
+
+
+# --------------------------------------------------------------------- pages
+def home_page(lang: str) -> None:
+    c = Ctx(lang, "index.html")
+    t = c.t
 
     cards = "\n".join(f"""        <a class="service-card" href="{c.service(s['slug'])}">
           <span class="service-icon">{icon(s['icon'])}</span>
@@ -265,53 +323,7 @@ def home_page(lang: str) -> None:
           <a class="btn btn-ghost" href="mailto:{EMAIL}">{icon('mail')} {EMAIL}</a>
         </div>
       </div>
-      <div class="form-card">
-        <h3>{fm['title']}</h3>
-        <p class="form-intro">{fm['intro']}</p>
-        <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate data-messages="{msgs}">
-          <input type="hidden" name="access_key" value="">
-          <input type="hidden" name="subject" value="{fm['subject']}">
-          <input type="hidden" name="from_name" value="thomasmoor.org">
-          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <div class="field">
-            <label for="f-name">{fm['name']} <span class="req" title="{fm['required']}">*</span></label>
-            <input id="f-name" name="name" type="text" autocomplete="name" required>
-          </div>
-          <div class="field-row">
-            <div class="field">
-              <label for="f-phone">{fm['phone']}</label>
-              <input id="f-phone" name="phone" type="tel" autocomplete="tel">
-            </div>
-            <div class="field">
-              <label for="f-email">{fm['email']}</label>
-              <input id="f-email" name="email" type="email" autocomplete="email">
-            </div>
-          </div>
-          <div class="field-row">
-            <div class="field">
-              <label for="f-service">{fm['service']}</label>
-              <select id="f-service" name="service">
-              <option value="">{fm['service_ph']}</option>
-{svc_opts}
-              </select>
-            </div>
-            <div class="field">
-              <label for="f-when">{fm['when']}</label>
-              <select id="f-when" name="when_needed">
-              <option value="">{fm['when_ph']}</option>
-{when_opts}
-              </select>
-            </div>
-          </div>
-          <div class="field">
-            <label for="f-message">{fm['message']}</label>
-            <textarea id="f-message" name="message" rows="4" placeholder="{fm['message_ph']}"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">{fm['submit']} {icon('arrow')}</button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-          <p class="form-note">{fm['note'].format(privacy=privacy)}</p>
-        </form>
-      </div>
+      {contact_form(c, 'hero')}
     </div>
   </section>
 
@@ -343,11 +355,15 @@ def home_page(lang: str) -> None:
   </section>
 
   <section class="section" id="about">
-    <div class="container about-grid">
-      <div class="portrait">{picture(c, 'thomas-moor', 'Thomas Moor', 640, 800)}</div>
+    <div class="container about-contact">
       <div class="about-text">
-        <p class="kicker">{ab['kicker']}</p>
-        <h2 class="section-title">{ab['title']}</h2>
+        <div class="about-head">
+          <div class="portrait portrait-sm">{picture(c, 'thomas-moor', 'Thomas Moor', 640, 800)}</div>
+          <div>
+            <p class="kicker">{ab['kicker']}</p>
+            <h2 class="section-title">{ab['title']}</h2>
+          </div>
+        </div>
 {about_p}
         <div class="stats">{stats}</div>
         <div class="hero-actions">
@@ -355,6 +371,7 @@ def home_page(lang: str) -> None:
           <a class="btn btn-ghost" href="{LINKEDIN}" target="_blank" rel="noopener">{icon('linkedin')} LinkedIn</a>
         </div>
       </div>
+      {contact_form(c, 'about')}
     </div>
   </section>
 </main>
@@ -375,7 +392,10 @@ def about_page(lang: str) -> None:
     <div class="container">
       <h1 class="eyebrow">{t['h1']}</h1>
       <h2 class="page-subtitle">{t['h2']}</h2>
-      <a class="email-link" href="mailto:{EMAIL}">{icon('mail')}<span>{EMAIL}</span></a>
+      <div class="contact-links">
+        <a class="email-link" href="mailto:{EMAIL}">{icon('mail')}<span>{EMAIL}</span></a>
+        <a class="email-link" href="{GITHUB}" target="_blank" rel="noopener">{icon('github')}<span>github.com/thomasmoor</span></a>
+      </div>
     </div>
   </section>
 

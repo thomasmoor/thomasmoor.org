@@ -49,16 +49,28 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/services/website-development.html"/>
   </url>
   <url>
-    <loc>https://thomasmoor.org/services/python-automation.html</loc>
+    <loc>https://thomasmoor.org/services/python-development.html</loc>
     <lastmod>2026-11-10</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/services/python-automation.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/services/python-automation.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/services/python-development.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/services/python-development.html"/>
   </url>
   <url>
-    <loc>https://thomasmoor.org/fr/services/python-automation.html</loc>
+    <loc>https://thomasmoor.org/fr/services/python-development.html</loc>
     <lastmod>2026-11-10</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/services/python-automation.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/services/python-automation.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/services/python-development.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/services/python-development.html"/>
+  </url>
+  <url>
+    <loc>https://thomasmoor.org/services/automation.html</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/services/automation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/services/automation.html"/>
+  </url>
+  <url>
+    <loc>https://thomasmoor.org/fr/services/automation.html</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/services/automation.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/services/automation.html"/>
   </url>
   <url>
     <loc>https://thomasmoor.org/services/technical-consulting.html</loc>
@@ -71,6 +83,18 @@
     <lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/services/technical-consulting.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/services/technical-consulting.html"/>
+  </url>
+  <url>
+    <loc>https://thomasmoor.org/services/business-analysis.html</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/services/business-analysis.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/services/business-analysis.html"/>
+  </url>
+  <url>
+    <loc>https://thomasmoor.org/fr/services/business-analysis.html</loc>
+    <lastmod>2026-11-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thomasmoor.org/services/business-analysis.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thomasmoor.org/fr/services/business-analysis.html"/>
   </url>
   <url>
     <loc>https://thomasmoor.org/services/ai-integration.html</loc>

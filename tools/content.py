@@ -1,11 +1,6 @@
 """All site copy, in English and French. Edit here, then run: python tools/build.py"""
 
-SERVICES = [
-    {"slug": "website-development", "icon": "web"},
-    {"slug": "python-automation", "icon": "terminal"},
-    {"slug": "technical-consulting", "icon": "chart"},
-    {"slug": "ai-integration", "icon": "chip"},
-]
+from services import SERVICES, SERVICE_TEXT  # noqa: F401  (service copy lives in services.py)
 
 CONTENT = {
     # ------------------------------------------------------------------ ENGLISH
@@ -49,7 +44,7 @@ CONTENT = {
         },
         "services_section": {
             "kicker": "What I do", "title": "Services",
-            "intro": "Four ways I can help — from a fast, reliable website to tools that take the repetitive work off your team.",
+            "intro": "Six ways I can help — from a fast, reliable website to tools that take the repetitive work off your team.",
             "more": "Learn more",
         },
         "areas": {
@@ -96,88 +91,7 @@ CONTENT = {
             "cta_text": "Tell me what you need — you will get a clear answer, a plan and a quote.",
             "cta_btn": "Request a quote",
         },
-        "services": {
-            "website-development": {
-                "name": "Website Development &amp; Delivery",
-                "short": "Design, build, and deployment of simple, fast, and reliable HTML/CSS websites (including GitHub Pages hosting).",
-                "intro": [
-                    "A website is often the first conversation a client has with your business. I design and build clean, hand-coded HTML/CSS websites that load fast, read well on every screen and are easy to keep up to date. No heavy page builders and no plugin sprawl — just a solid, well-structured site that you fully own.",
-                    "From the first sketch to the moment your domain goes live, I take care of the whole chain: structure and content, design, development, testing and deployment — including free, secure hosting on GitHub Pages with your own domain name.",
-                ],
-                "why": [
-                    "Speed and reliability are not luxuries. Visitors leave slow sites within seconds, search engines favour fast pages, and every extra plugin is one more thing that can break or be attacked. A simple static website removes most of those risks: there is no database to hack, nothing to patch every week, and hosting costs can drop to zero.",
-                    "For consultants, small businesses and independent professionals, that means a credible online presence that simply works — and keeps working without an expensive maintenance contract.",
-                ],
-                "expect": [
-                    "A short discovery call and a one-page written spec before any work starts",
-                    "A responsive design that works on phones, tablets and desktops",
-                    "Clean, standards-based HTML/CSS with on-page SEO basics (titles, descriptions, sitemap)",
-                    "Contact form, analytics and GDPR-aware cookie consent, set up for you",
-                    "Deployment on GitHub Pages (or your own hosting) with your domain and HTTPS",
-                    "Handover notes so you know exactly how to update your content",
-                ],
-            },
-            "python-automation": {
-                "name": "Advanced Python Tool Development and Automation",
-                "short": "Custom scripting, data processing, and integration tools for business workflows.",
-                "intro": [
-                    "Many businesses still run on spreadsheets, copy-paste and manual exports. I build custom Python tools that take over that work: scripts that collect and clean data, generate reports, move information between systems or check results automatically.",
-                    "Each tool is designed around your actual workflow — readable, documented, and robust enough to run unattended every day.",
-                ],
-                "why": [
-                    "Manual, repetitive processing is slow, expensive and error-prone. One wrong formula or one missed file can quietly corrupt a report that people rely on. Automating these steps frees your team for higher-value work and makes results consistent and auditable.",
-                    "Years in capital markets, where data quality is non-negotiable, taught me a simple discipline that I apply to every tool: validate the inputs, log what happens, and fail loudly rather than silently.",
-                ],
-                "expect": [
-                    "Analysis of your current process and a clear spec of what the tool will do",
-                    "Data processing with pandas, SQL databases, Excel/CSV files and APIs",
-                    "Integrations between the systems you already use",
-                    "Scheduled or on-demand execution, with logging and error alerts",
-                    "Tested, documented code that you own",
-                    "Support after delivery, and evolutions as your needs grow",
-                ],
-            },
-            "technical-consulting": {
-                "name": "Technical Consulting &amp; Business Analysis",
-                "short": "Bridging business needs and technical implementation (25+ years in Capital Markets, Risk, and IT).",
-                "intro": [
-                    "Projects rarely fail because of technology alone. They fail when business needs and technical implementation drift apart. As a consultant and business analyst, I sit between the two: I understand what your teams need, translate it into precise requirements, and make sure that what gets built actually matches.",
-                    "With 25+ years in Capital Markets, Risk and IT — including senior roles at Finastra, Murex, Calypso and Reuters — I have worked on trading, risk and back-office systems for tier-one banks across Europe and the Middle East.",
-                ],
-                "why": [
-                    "Unclear requirements are the most expensive bug in any project. Every misunderstanding discovered late costs time, budget and trust. A structured analysis up front — led by someone who speaks both the business and the technical language — keeps a project on scope, on time and on budget.",
-                    "An experienced outside view also helps you challenge vendor proposals, prioritise what really matters and avoid paying for features nobody will use.",
-                ],
-                "expect": [
-                    "Workshops with stakeholders to capture needs and constraints",
-                    "Functional and technical specifications, user stories and acceptance criteria",
-                    "Gap analysis, process mapping and solution assessment",
-                    "Data analysis and SQL investigation to support decisions",
-                    "Test strategy, UAT coordination and go-live support",
-                    "Clear, regular reporting to management",
-                ],
-            },
-            "ai-integration": {
-                "name": "Automation &amp; AI Integration",
-                "short": "Streamlining content creation, reporting, and repetitive tasks using Python and JavaScript.",
-                "intro": [
-                    "Automation and artificial intelligence are now practical tools for small teams, not just for large corporations. I help you put them to work on concrete tasks: drafting and reformatting content, summarising documents, producing recurring reports and handling the repetitive steps in between.",
-                    "I build these workflows with Python and JavaScript, connecting AI services to the tools you already use, so the results land where you need them — with a human check where it matters.",
-                ],
-                "why": [
-                    "Time spent on repetitive writing, formatting and reporting is time not spent with clients. A well-designed automation can turn hours of work into minutes.",
-                    "Used carelessly, however, AI produces errors and creates risks. The value comes from a well-scoped workflow with clear rules, validation steps and human oversight — which is exactly how I design them.",
-                ],
-                "expect": [
-                    "Identification of the tasks where automation brings a real return",
-                    "AI-assisted content creation and reporting pipelines",
-                    "Integration with your tools: email, spreadsheets, CMS and APIs",
-                    "Guardrails: review steps, validation and data-privacy safeguards",
-                    "Documentation and a hand-over session so your team stays in control",
-                    "Measured results: time saved and quality gained",
-                ],
-            },
-        },
+        "services": SERVICE_TEXT["en"],
         "footer": {
             "services": "Services", "info": "Information", "about": "About",
             "privacy": "Privacy policy", "cookies": "Cookie settings", "rights": "All rights reserved.",
@@ -263,7 +177,7 @@ CONTENT = {
         },
         "services_section": {
             "kicker": "Ce que je fais", "title": "Services",
-            "intro": "Quatre façons de vous aider — d’un site web rapide et fiable jusqu’aux outils qui libèrent votre équipe des tâches répétitives.",
+            "intro": "Six façons de vous aider — d’un site web rapide et fiable jusqu’aux outils qui libèrent votre équipe des tâches répétitives.",
             "more": "En savoir plus",
         },
         "areas": {
@@ -310,88 +224,7 @@ CONTENT = {
             "cta_text": "Décrivez votre besoin — vous recevrez une réponse claire, un plan et un devis.",
             "cta_btn": "Demander un devis",
         },
-        "services": {
-            "website-development": {
-                "name": "Création &amp; mise en ligne de sites web",
-                "short": "Conception, développement et mise en ligne de sites HTML/CSS simples, rapides et fiables (hébergement GitHub Pages inclus).",
-                "intro": [
-                    "Votre site web est souvent le premier échange entre un client et votre activité. Je conçois et développe des sites HTML/CSS codés à la main, propres, rapides, lisibles sur tous les écrans et faciles à mettre à jour. Pas de constructeur de pages lourd ni d’empilement d’extensions : un site solide, bien structuré, dont vous êtes entièrement propriétaire.",
-                    "De la première esquisse à la mise en ligne sur votre nom de domaine, je prends en charge toute la chaîne : structure et contenus, design, développement, tests et déploiement — y compris un hébergement gratuit et sécurisé sur GitHub Pages avec votre propre domaine.",
-                ],
-                "why": [
-                    "La rapidité et la fiabilité ne sont pas un luxe. Les visiteurs quittent un site lent en quelques secondes, les moteurs de recherche privilégient les pages rapides, et chaque extension supplémentaire est un point de panne ou d’attaque de plus. Un site statique simple élimine la plupart de ces risques : pas de base de données à pirater, rien à corriger chaque semaine, et des frais d’hébergement qui peuvent tomber à zéro.",
-                    "Pour un consultant, une petite entreprise ou un indépendant, c’est une présence en ligne crédible qui fonctionne, tout simplement — et qui continue de fonctionner sans contrat de maintenance coûteux.",
-                ],
-                "expect": [
-                    "Un court échange de cadrage et une spécification écrite d’une page avant tout démarrage",
-                    "Un design responsive, adapté aux mobiles, tablettes et ordinateurs",
-                    "Un code HTML/CSS propre et conforme aux standards, avec les bases du SEO (titres, descriptions, plan du site)",
-                    "Formulaire de contact, mesure d’audience et bandeau cookies conforme au RGPD, configurés pour vous",
-                    "Mise en ligne sur GitHub Pages (ou votre hébergement) avec votre domaine et le HTTPS",
-                    "Des notes de passation pour savoir exactement comment mettre à jour vos contenus",
-                ],
-            },
-            "python-automation": {
-                "name": "Développement d’outils Python avancés et automatisation",
-                "short": "Scripts sur mesure, traitement de données et outils d’intégration pour vos processus métier.",
-                "intro": [
-                    "Beaucoup d’entreprises fonctionnent encore à coups de tableurs, de copier-coller et d’exports manuels. Je développe des outils Python sur mesure qui prennent ce travail en charge : scripts qui collectent et nettoient les données, génèrent des rapports, transfèrent l’information entre systèmes ou contrôlent automatiquement les résultats.",
-                    "Chaque outil est conçu autour de votre processus réel — lisible, documenté et assez robuste pour tourner chaque jour sans surveillance.",
-                ],
-                "why": [
-                    "Les traitements manuels et répétitifs sont lents, coûteux et sources d’erreurs. Une formule erronée ou un fichier oublié peut fausser discrètement un rapport sur lequel tout le monde s’appuie. Automatiser ces étapes libère votre équipe pour un travail à plus forte valeur et rend les résultats cohérents et vérifiables.",
-                    "Des années sur les marchés de capitaux, où la qualité des données n’est pas négociable, m’ont appris une discipline simple que j’applique à chaque outil : valider les entrées, tracer ce qui se passe, et signaler clairement une erreur plutôt que l’ignorer.",
-                ],
-                "expect": [
-                    "Une analyse de votre processus actuel et une spécification claire de ce que fera l’outil",
-                    "Traitement de données avec pandas, bases SQL, fichiers Excel/CSV et API",
-                    "Des intégrations entre les systèmes que vous utilisez déjà",
-                    "Exécution planifiée ou à la demande, avec journalisation et alertes d’erreur",
-                    "Un code testé et documenté, qui vous appartient",
-                    "Un support après livraison et des évolutions au rythme de vos besoins",
-                ],
-            },
-            "technical-consulting": {
-                "name": "Conseil technique &amp; analyse métier",
-                "short": "Faire le lien entre les besoins métier et la mise en œuvre technique (plus de 25 ans en marchés de capitaux, risques et IT).",
-                "intro": [
-                    "Un projet échoue rarement à cause de la seule technologie. Il échoue quand les besoins métier et la mise en œuvre technique s’éloignent l’un de l’autre. En tant que consultant et business analyst, je me place entre les deux : je comprends ce dont vos équipes ont besoin, je le traduis en exigences précises et je m’assure que ce qui est construit y correspond vraiment.",
-                    "Avec plus de 25 ans en marchés de capitaux, risques et IT — notamment à des postes seniors chez Finastra, Murex, Calypso et Reuters — j’ai travaillé sur des systèmes de trading, de risque et de back-office pour de grandes banques en Europe et au Moyen-Orient.",
-                ],
-                "why": [
-                    "Des exigences floues sont le bug le plus coûteux d’un projet. Chaque malentendu découvert tardivement coûte du temps, du budget et de la confiance. Une analyse structurée en amont — menée par quelqu’un qui parle à la fois le langage du métier et celui de la technique — permet de tenir le périmètre, les délais et le budget.",
-                    "Un regard extérieur expérimenté vous aide aussi à challenger les propositions des éditeurs, à prioriser l’essentiel et à éviter de payer des fonctionnalités que personne n’utilisera.",
-                ],
-                "expect": [
-                    "Des ateliers avec les parties prenantes pour recueillir besoins et contraintes",
-                    "Spécifications fonctionnelles et techniques, user stories et critères d’acceptation",
-                    "Analyse d’écarts, cartographie des processus et évaluation de solutions",
-                    "Analyses de données et requêtes SQL pour éclairer les décisions",
-                    "Stratégie de test, coordination de la recette (UAT) et accompagnement à la mise en production",
-                    "Un reporting clair et régulier auprès de la direction",
-                ],
-            },
-            "ai-integration": {
-                "name": "Automatisation &amp; intégration de l’IA",
-                "short": "Automatiser la création de contenu, le reporting et les tâches répétitives avec Python et JavaScript.",
-                "intro": [
-                    "L’automatisation et l’intelligence artificielle sont aujourd’hui des outils concrets pour les petites équipes, pas seulement pour les grands groupes. Je vous aide à les mettre au service de tâches précises : rédaction et mise en forme de contenus, synthèse de documents, rapports récurrents et toutes les étapes répétitives entre les deux.",
-                    "Je construis ces flux en Python et JavaScript, en connectant les services d’IA aux outils que vous utilisez déjà, pour que les résultats arrivent là où vous en avez besoin — avec une validation humaine quand c’est nécessaire.",
-                ],
-                "why": [
-                    "Le temps passé à rédiger, mettre en forme et produire des rapports répétitifs est du temps en moins pour vos clients. Une automatisation bien conçue peut transformer des heures de travail en quelques minutes.",
-                    "Utilisée sans précaution, l’IA produit pourtant des erreurs et crée des risques. La valeur vient d’un flux bien cadré, avec des règles claires, des étapes de contrôle et une supervision humaine — c’est exactement ainsi que je les conçois.",
-                ],
-                "expect": [
-                    "L’identification des tâches où l’automatisation apporte un vrai retour",
-                    "Des chaînes de création de contenu et de reporting assistées par l’IA",
-                    "L’intégration à vos outils : e-mail, tableurs, CMS et API",
-                    "Des garde-fous : étapes de relecture, contrôles et protection des données",
-                    "Documentation et séance de prise en main pour que votre équipe garde la main",
-                    "Des résultats mesurés : temps gagné et qualité améliorée",
-                ],
-            },
-        },
+        "services": SERVICE_TEXT["fr"],
         "footer": {
             "services": "Services", "info": "Informations", "about": "À propos",
             "privacy": "Politique de confidentialité", "cookies": "Gérer les cookies", "rights": "Tous droits réservés.",

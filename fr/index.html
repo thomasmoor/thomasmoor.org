@@ -25,10 +25,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap">
-<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/style.css?v=048f5f73">
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});</script>
-<script src="../assets/js/config.js"></script>
-<script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/config.js?v=d55411d3"></script>
+<script src="../assets/js/main.js?v=b1313b63" defer></script>
 <link rel="preload" as="image" href="../assets/img/hero.webp" type="image/webp">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Thomas Moor — Digital Services", "legalName": "Thomas Moor Consulting", "url": "https://thomasmoor.org", "email": "contact@thomasmoor.org", "image": "https://thomasmoor.org/assets/img/og-image.jpg", "logo": "https://thomasmoor.org/assets/img/logo.png", "areaServed": "Worldwide", "founder": {"@type": "Person", "name": "Thomas Moor"}, "sameAs": ["https://www.linkedin.com/in/tmoor", "https://github.com/thomasmoor"], "knowsLanguage": ["en", "fr"]}</script>
 </head>
@@ -64,39 +64,41 @@
       <div class="form-card">
         <h3>Parlez-moi de votre projet</h3>
         <p class="form-intro">Je réponds généralement sous un jour ouvré.</p>
-        <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate data-messages="{&quot;required&quot;: &quot;Veuillez indiquer votre nom.&quot;, &quot;email&quot;: &quot;Veuillez saisir une adresse e-mail valide.&quot;, &quot;sending&quot;: &quot;Envoi en cours…&quot;, &quot;success&quot;: &quot;Merci ! Votre message a bien été envoyé. Je vous réponds très vite.&quot;, &quot;error&quot;: &quot;Désolé, le message n’a pas pu être envoyé. Écrivez-moi à contact@thomasmoor.org.&quot;, &quot;notConfigured&quot;: &quot;Le formulaire n’est pas encore actif. Écrivez-moi à contact@thomasmoor.org.&quot;}">
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate data-messages="{&quot;required&quot;: &quot;Veuillez indiquer votre nom.&quot;, &quot;email&quot;: &quot;Veuillez saisir une adresse e-mail valide.&quot;, &quot;sending&quot;: &quot;Envoi en cours…&quot;, &quot;success&quot;: &quot;Merci ! Votre message a bien été envoyé. Je vous réponds très vite.&quot;, &quot;error&quot;: &quot;Désolé, le message n’a pas pu être envoyé. Écrivez-moi à contact@thomasmoor.org.&quot;, &quot;notConfigured&quot;: &quot;Le formulaire n’est pas encore actif. Écrivez-moi à contact@thomasmoor.org.&quot;}">
           <input type="hidden" name="access_key" value="">
           <input type="hidden" name="subject" value="Nouvelle demande depuis thomasmoor.org (FR)">
           <input type="hidden" name="from_name" value="thomasmoor.org">
           <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="field">
-            <label for="f-name">Nom <span class="req" title="obligatoire">*</span></label>
-            <input id="f-name" name="name" type="text" autocomplete="name" required>
+            <label for="hero-name">Nom <span class="req" title="obligatoire">*</span></label>
+            <input id="hero-name" name="name" type="text" autocomplete="name" required>
           </div>
           <div class="field-row">
             <div class="field">
-              <label for="f-phone">Téléphone</label>
-              <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+              <label for="hero-phone">Téléphone</label>
+              <input id="hero-phone" name="phone" type="tel" autocomplete="tel">
             </div>
             <div class="field">
-              <label for="f-email">E-mail</label>
-              <input id="f-email" name="email" type="email" autocomplete="email">
+              <label for="hero-email">E-mail</label>
+              <input id="hero-email" name="email" type="email" autocomplete="email">
             </div>
           </div>
           <div class="field-row">
             <div class="field">
-              <label for="f-service">Service</label>
-              <select id="f-service" name="service">
+              <label for="hero-service">Service</label>
+              <select id="hero-service" name="service">
               <option value="">Choisissez un service</option>
               <option value="Website Development &amp; Delivery">Création &amp; mise en ligne de sites web</option>
-              <option value="Advanced Python Tool Development and Automation">Développement d’outils Python avancés et automatisation</option>
-              <option value="Technical Consulting &amp; Business Analysis">Conseil technique &amp; analyse métier</option>
-              <option value="Automation &amp; AI Integration">Automatisation &amp; intégration de l’IA</option>
+              <option value="Advanced Python Tool Development">Développement d’outils Python avancés</option>
+              <option value="Automation">Automatisation</option>
+              <option value="Technical Consulting">Conseil technique</option>
+              <option value="Business Analysis">Analyse métier</option>
+              <option value="AI Integration">Intégration de l’IA</option>
               </select>
             </div>
             <div class="field">
-              <label for="f-when">Pour quand en avez-vous besoin ?</label>
-              <select id="f-when" name="when_needed">
+              <label for="hero-when">Pour quand en avez-vous besoin ?</label>
+              <select id="hero-when" name="when_needed">
               <option value="">Choisissez un délai</option>
               <option value="Emergency">Urgent</option>
               <option value="This week">Cette semaine</option>
@@ -105,8 +107,8 @@
             </div>
           </div>
           <div class="field">
-            <label for="f-message">Message</label>
-            <textarea id="f-message" name="message" rows="4" placeholder="Quelques mots sur votre besoin…"></textarea>
+            <label for="hero-message">Message</label>
+            <textarea id="hero-message" name="message" rows="4" placeholder="Quelques mots sur votre besoin…"></textarea>
           </div>
           <button type="submit" class="btn btn-primary btn-block">Envoyer la demande <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
           <p class="form-status" role="status" aria-live="polite"></p>
@@ -121,7 +123,7 @@
       <div class="section-head">
         <p class="kicker">Ce que je fais</p>
         <h2 class="section-title">Services</h2>
-        <p>Quatre façons de vous aider — d’un site web rapide et fiable jusqu’aux outils qui libèrent votre équipe des tâches répétitives.</p>
+        <p>Six façons de vous aider — d’un site web rapide et fiable jusqu’aux outils qui libèrent votre équipe des tâches répétitives.</p>
       </div>
       <div class="cards">
         <a class="service-card" href="../fr/services/website-development.html">
@@ -130,22 +132,34 @@
           <p>Conception, développement et mise en ligne de sites HTML/CSS simples, rapides et fiables (hébergement GitHub Pages inclus).</p>
           <span class="card-link">En savoir plus <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
-        <a class="service-card" href="../fr/services/python-automation.html">
+        <a class="service-card" href="../fr/services/python-development.html">
           <span class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></svg></span>
-          <h3>Développement d’outils Python avancés et automatisation</h3>
-          <p>Scripts sur mesure, traitement de données et outils d’intégration pour vos processus métier.</p>
+          <h3>Développement d’outils Python avancés</h3>
+          <p>Scripts Python sur mesure, traitement de données et outils d’intégration, conçus autour de vos processus métier.</p>
+          <span class="card-link">En savoir plus <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="service-card" href="../fr/services/automation.html">
+          <span class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5M3 21v-5h5"/></svg></span>
+          <h3>Automatisation</h3>
+          <p>Automatiser le reporting, le traitement des données et les tâches répétitives avec Python et JavaScript — pour que votre équipe se concentre sur l’essentiel.</p>
           <span class="card-link">En savoir plus <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
         <a class="service-card" href="../fr/services/technical-consulting.html">
           <span class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 6-6"/><path d="M16 8h4v4"/></svg></span>
-          <h3>Conseil technique &amp; analyse métier</h3>
-          <p>Faire le lien entre les besoins métier et la mise en œuvre technique (plus de 25 ans en marchés de capitaux, risques et IT).</p>
+          <h3>Conseil technique</h3>
+          <p>Une expertise technique indépendante sur vos systèmes, votre architecture et vos mises en œuvre — forte de plus de 25 ans en marchés de capitaux, risques et IT.</p>
+          <span class="card-link">En savoir plus <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="service-card" href="../fr/services/business-analysis.html">
+          <span class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h4"/></svg></span>
+          <h3>Analyse métier</h3>
+          <p>Faire le lien entre les besoins métier et la mise en œuvre technique : exigences claires, spécifications et analyse des processus.</p>
           <span class="card-link">En savoir plus <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
         <a class="service-card" href="../fr/services/ai-integration.html">
-          <span class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M10 10h4v4h-4z"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span>
-          <h3>Automatisation &amp; intégration de l’IA</h3>
-          <p>Automatiser la création de contenu, le reporting et les tâches répétitives avec Python et JavaScript.</p>
+          <span class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3l1.9 5.1L18 10l-5.1 1.9L11 17l-1.9-5.1L4 10l5.1-1.9z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8z"/></svg></span>
+          <h3>Intégration de l’IA</h3>
+          <p>Mettre l’IA au service de la création de contenu, du traitement de documents et du reporting — avec les bons garde-fous.</p>
           <span class="card-link">En savoir plus <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </a>
       </div>
@@ -178,11 +192,15 @@
   </section>
 
   <section class="section" id="about">
-    <div class="container about-grid">
-      <div class="portrait"><picture><source srcset="../assets/img/thomas-moor.webp" type="image/webp"><img src="../assets/img/thomas-moor.jpg" width="640" height="800" alt="Thomas Moor" loading="lazy" decoding="async"></picture></div>
+    <div class="container about-contact">
       <div class="about-text">
-        <p class="kicker">À propos</p>
-        <h2 class="section-title">La rigueur de la banque, au service de votre projet</h2>
+        <div class="about-head">
+          <div class="portrait portrait-sm"><picture><source srcset="../assets/img/thomas-moor.webp" type="image/webp"><img src="../assets/img/thomas-moor.jpg" width="640" height="800" alt="Thomas Moor" loading="lazy" decoding="async"></picture></div>
+          <div>
+            <p class="kicker">À propos</p>
+            <h2 class="section-title">La rigueur de la banque, au service de votre projet</h2>
+          </div>
+        </div>
           <p>Fort de plus de 25 ans d’expérience dans la banque internationale et l’informatique — notamment à des postes seniors chez Finastra, Murex, Calypso et Reuters — j’ai consacré ma carrière à résoudre des problèmes techniques et métier complexes. Aujourd’hui, j’applique cette même rigueur, cette même précision et cette même discipline de gestion de projet aux services web et au développement Python.</p>
           <p>J’associe de solides compétences techniques (SQL, Python, Java, VBA, JavaScript) à un état d’esprit de consultant : j’écoute, je spécifie, je livre. Qu’il vous faille un site web simple et soigné ou un outil d’automatisation sur mesure, j’apporte le même engagement envers la qualité, la clarté de la communication et le respect des délais que celui dont j’ai fait preuve auprès de grandes institutions financières en Europe et au Moyen-Orient.</p>
         <div class="stats"><div class="stat"><strong>25+</strong><span>ans en banque &amp; IT</span></div><div class="stat"><strong>2</strong><span>langues : FR / EN</span></div><div class="stat"><strong>100 %</strong><span>à distance</span></div></div>
@@ -190,6 +208,60 @@
           <a class="btn btn-primary" href="../fr/about.html">En savoir plus sur moi <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/tmoor" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg> LinkedIn</a>
         </div>
+      </div>
+      <div class="form-card">
+        <h3>Parlez-moi de votre projet</h3>
+        <p class="form-intro">Je réponds généralement sous un jour ouvré.</p>
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate data-messages="{&quot;required&quot;: &quot;Veuillez indiquer votre nom.&quot;, &quot;email&quot;: &quot;Veuillez saisir une adresse e-mail valide.&quot;, &quot;sending&quot;: &quot;Envoi en cours…&quot;, &quot;success&quot;: &quot;Merci ! Votre message a bien été envoyé. Je vous réponds très vite.&quot;, &quot;error&quot;: &quot;Désolé, le message n’a pas pu être envoyé. Écrivez-moi à contact@thomasmoor.org.&quot;, &quot;notConfigured&quot;: &quot;Le formulaire n’est pas encore actif. Écrivez-moi à contact@thomasmoor.org.&quot;}">
+          <input type="hidden" name="access_key" value="">
+          <input type="hidden" name="subject" value="Nouvelle demande depuis thomasmoor.org (FR)">
+          <input type="hidden" name="from_name" value="thomasmoor.org">
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="field">
+            <label for="about-name">Nom <span class="req" title="obligatoire">*</span></label>
+            <input id="about-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="about-phone">Téléphone</label>
+              <input id="about-phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="about-email">E-mail</label>
+              <input id="about-email" name="email" type="email" autocomplete="email">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="about-service">Service</label>
+              <select id="about-service" name="service">
+              <option value="">Choisissez un service</option>
+              <option value="Website Development &amp; Delivery">Création &amp; mise en ligne de sites web</option>
+              <option value="Advanced Python Tool Development">Développement d’outils Python avancés</option>
+              <option value="Automation">Automatisation</option>
+              <option value="Technical Consulting">Conseil technique</option>
+              <option value="Business Analysis">Analyse métier</option>
+              <option value="AI Integration">Intégration de l’IA</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="about-when">Pour quand en avez-vous besoin ?</label>
+              <select id="about-when" name="when_needed">
+              <option value="">Choisissez un délai</option>
+              <option value="Emergency">Urgent</option>
+              <option value="This week">Cette semaine</option>
+              <option value="This month">Ce mois-ci</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="about-message">Message</label>
+            <textarea id="about-message" name="message" rows="4" placeholder="Quelques mots sur votre besoin…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Envoyer la demande <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+          <p class="form-note">Vos coordonnées servent uniquement à répondre à votre demande. Voir la <a href="../fr/privacy.html">politique de confidentialité</a>.</p>
+        </form>
       </div>
     </div>
   </section>
@@ -208,9 +280,11 @@
       <h2 class="footer-title">Services</h2>
       <ul class="footer-list">
           <li><a href="../fr/services/website-development.html">Création &amp; mise en ligne de sites web</a></li>
-          <li><a href="../fr/services/python-automation.html">Développement d’outils Python avancés et automatisation</a></li>
-          <li><a href="../fr/services/technical-consulting.html">Conseil technique &amp; analyse métier</a></li>
-          <li><a href="../fr/services/ai-integration.html">Automatisation &amp; intégration de l’IA</a></li>
+          <li><a href="../fr/services/python-development.html">Développement d’outils Python avancés</a></li>
+          <li><a href="../fr/services/automation.html">Automatisation</a></li>
+          <li><a href="../fr/services/technical-consulting.html">Conseil technique</a></li>
+          <li><a href="../fr/services/business-analysis.html">Analyse métier</a></li>
+          <li><a href="../fr/services/ai-integration.html">Intégration de l’IA</a></li>
       </ul>
     </div>
     <div>

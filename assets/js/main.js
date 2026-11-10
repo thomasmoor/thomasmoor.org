@@ -77,8 +77,7 @@
   });
 
   /* ---------------- contact form (Web3Forms) */
-  var form = document.getElementById("contact-form");
-  if (form) {
+  document.querySelectorAll(".contact-form").forEach(function (form) {
     var status = form.querySelector(".form-status");
     var msgs = JSON.parse(form.getAttribute("data-messages"));
     var submit = form.querySelector("[type=submit]");
@@ -113,5 +112,5 @@
         .catch(function () { say(msgs.error, "error"); })
         .then(function () { submit.disabled = false; });
     });
-  }
+  });
 })();
